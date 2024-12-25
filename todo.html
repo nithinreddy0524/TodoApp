@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="todo.css">
+    <link rel="icon" href="todo.png" type="image/png">
+</head>
+<body>
+
+    <!-- popup -->
+    <div id="customPopup" style="display: none;" class="popup">
+        <div class="popup-content">
+            <p style="margin:10px 0px ; font-weight: 600;font-size:20px;color:rgb(165, 81, 28)">Todo App</p>
+            <p style="margin:0px ; font-weight: 500 ;font-size:16px; color:rgb(0, 0, 0)">Developed by Nithin Reddy</p>
+            <button style="margin:20px 0px ;padding:5px 10px " onclick="closePopup()">Close</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <p class="title">Todo Application</p>
+        <div class="inputTodo">
+            <input type="text" id="input1" placeholder="Write your todo here...">
+            <button id="addTodo">Add Todo</button>
+        </div>
+    </div>
+    
+    <div class="container2">
+        <div class="status">
+            <button class="filter" data-filter="all">
+                All
+            </button>
+            <button class="filter" data-filter="completed">
+                Completed
+            </button>
+            <button class="filter" data-filter="pending">
+                Pending
+            </button>
+        </div>
+
+        <ul id="todoList">
+
+        </ul>
+    </div>
+    <script src="todo.js"></script>
+    <!-- <script>console.log("hello")</script> -->
+</body>
+</html>

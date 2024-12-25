@@ -1,0 +1,223 @@
+:root{
+    --body-bg:rgb(235, 235, 235);
+    --button-bg:rgb(69, 172, 78);
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    margin:0;
+    padding: 0;
+    background-color: var(--body-bg);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.container{
+    background-color: rgb(65, 65, 65);
+    box-shadow: 0 0 50 rgb(0, 0, 0);
+    padding: 20px;
+    margin: 10px 10px;
+    border-radius: 5px;
+    padding-bottom: 25px;
+}
+.container2{
+    background-color: rgb(243, 242, 242);
+    box-shadow: 0 0 50 rgb(0, 0, 0);
+    padding: 20px;
+    margin: 10px 10px;
+    border-radius: 5px;
+    padding-bottom: 25px;
+}
+.inputTodo {
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#input1{
+    border-radius: 5px;
+    border: 1px solid wheat;
+    padding: 8px;
+    width: 80%;
+    outline: none;
+}
+.status {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin:0px 0px 10px 0px;
+}
+
+.title{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top:5px;
+    /* text-transform: uppercase; */
+    color: rgb(255, 255, 255);
+    font-weight: 800;
+    font-size: 25px;
+}
+#addTodo{
+    padding: 8px;
+    border: none;
+    background-color: var(--button-bg);
+    border-radius: 5px;
+    margin-left: 8px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    transition: background-color 0.2s;
+
+}
+#addTodo:hover{
+    background-color: rgb(28, 133, 44);
+}
+
+#todoList {
+    margin: 0;
+}
+
+ul{
+    list-style-type:none;
+    padding: 0;
+    margin-top: 5px;
+}
+li{
+    padding-top:0 ;
+    padding:10px;
+    border-bottom: 1px solid rgb(88, 88, 88);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+li:hover{
+    background-color: rgb(230, 229, 229);
+}
+
+.filter{
+    background-color: rgb(178, 157, 22);
+    transition: background-color 0.2s;
+    border:none;
+    font-weight: 500;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.editBtn,.deleteBtn,.completedBtn{
+    transition: background-color 0.2s;
+    border:none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: 500;
+    color: white;
+    margin-left:2px;
+    cursor: pointer;
+}
+.editBtn{
+    background-color: rgb(46, 161, 184);
+}
+.deleteBtn{
+    background-color: rgb(183, 111, 111);
+}
+.completedBtn{
+    background-color:rgb(120, 171, 49) ;
+}
+.editBtn:hover{
+    background-color: rgb(11, 121, 143);
+}
+.deleteBtn:hover{
+    background-color: rgb(152, 70, 70);
+}
+.completedBtn:hover{
+    background-color:rgb(82, 118, 32) ;
+}
+.filter:hover{
+    background-color: rgb(112, 106, 26);
+}
+
+.todoItem{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.completed{
+    text-decoration: line-through;
+}
+.todoItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+/* Popup container styling */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Popup content styling */
+.popup-content {
+    background-color: #f9f9f9; /* Light background */
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 70%;
+    font-size: 20px;
+}
+
+/* Close button styling */
+.popup-content button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #3c7616;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.popup-content button:hover {
+    background-color: #35581d;
+}
+
+@media screen and (max-width: 600px) {
+    .inputTodo {
+        flex-direction: column;
+        gap: 8px;
+    }
+    #input1 {
+        width: 100%;
+    }
+    .container {
+        padding: 8px 8px;
+    }
+    .container2 {
+        padding: 2px 2px;
+    }
+    p{
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .todoItem {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+    }
+}
